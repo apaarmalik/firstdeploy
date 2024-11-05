@@ -1,3 +1,3 @@
 import streamlit as st
-st.write("enter 1st number")
-
+num1=st.number_input("enter 1st number")
+st.write(num1)
