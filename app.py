@@ -3,7 +3,7 @@ import pandas as pd
 
 file = st.file_uploader("Select an excel File", accept_multiple_files=False)
 
-df = pd.read_excel(file)
+df = pd.read_csv(file)
 st.write(df.head())
 
 num1=st.number_input("enter 1st number")
