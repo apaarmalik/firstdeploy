@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 
-file = st.file_uploader("Select an excel File",type = ['csv','xlsx'], accept_multiple_files=False)
+file = st.file_uploader("Select an excel File", accept_multiple_files=False)
 
 df = pd.read_excel(file)
 st.write(df.head())
