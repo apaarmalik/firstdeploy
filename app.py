@@ -1,4 +1,11 @@
 import streamlit as st
+import pandas as pd
+
+file = st.file_uploader("Select a CSV File",accept_multiple_files=False)
+
+df = pd.read_csv(file)
+st.write(df.head())
+
 num1=st.number_input("enter 1st number")
 num2=st.number_input("enter 2nd number")
 opr = st.chat_input("Enter the operator")
