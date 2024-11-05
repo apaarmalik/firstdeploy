@@ -16,5 +16,7 @@ elif opr == "*":
   st.write(num1*num2)
 elif opr == "/":
   st.write(num1/num2)
+elif opr =="":
+  st.write(" ")
 else:
   st.write(num1-num2)
