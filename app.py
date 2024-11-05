@@ -10,7 +10,7 @@ num1=st.number_input("enter 1st number")
 num2=st.number_input("enter 2nd number")
 opr = st.chat_input("Enter the operator")
 
-if opr<>"":
+if opr!="":
     if opr == "+":
       st.write(num1+num2)
     elif opr == "*" or opr =="x":
