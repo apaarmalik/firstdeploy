@@ -1,9 +1,10 @@
 import streamlit as st
 import pandas as pd
+import openpyxl as px
 
 file = st.file_uploader("Select an excel File", accept_multiple_files=False)
 
-df = pd.read_excel(file)
+df = px.load_workbook(file)
 st.write(df.head())
 
 num1=st.number_input("enter 1st number")
