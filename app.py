@@ -12,11 +12,11 @@ opr = st.chat_input("Enter the operator")
 
 if opr == "+":
   st.write(num1+num2)
-elif opr == "*":
+elif opr == "*" or opr =="x":
   st.write(num1*num2)
 elif opr == "/":
   st.write(num1/num2)
-elif opr =="":
-  st.write(" ")
+elif opr == "-":
+  st.write(num1 - num2)
 else:
-  st.write(num1-num2)
+  st.write(" ")
