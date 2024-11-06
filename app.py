@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import openpyxl as px
-import speech_recognition as sr
+
 
 file = st.file_uploader("Select an excel File", accept_multiple_files=False)
 
@@ -11,20 +11,6 @@ except:
     df = pd.read_csv(file)
 st.write(df.head())
 
-
-container = st.container()
-recognizer = sr.Recognizer()
-recognizer.energy_threshold=300
-
-mic=sr.Microphone()
-with mic as source:
-    st.write("say something")
-    audio=recognizer.listen(source)
-    try:
-        text=recognizer.recognize_google(audio)
-        st.write(text)
-    except sr.UnknownValueError:
-        st.write("could not understand")
 
 
 num1=st.number_input("enter 1st number")
