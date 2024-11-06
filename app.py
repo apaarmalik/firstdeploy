@@ -2,6 +2,8 @@ import streamlit as st
 import pandas as pd
 import openpyxl as px
 import os
+import io
+
 
 while True:
     try:
@@ -15,8 +17,11 @@ try:
 except:
     df = pd.read_csv(file)
 st.write(df.head())
-df.info()
 
+buffer = io.StringIO()
+df.info(buf=buffer)
+s = buffer.getvalue()
+st.text(s)
 
 num1=st.number_input("enter 1st number")
 num2=st.number_input("enter 2nd number")
