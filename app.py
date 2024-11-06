@@ -29,7 +29,7 @@ st.write("newline")
 df_aux = df.describe(include='all')
 st.write(df_aux)
 
-max = df["values"].max()
+max = df["value"].max()
 st.write(f"The maximum value in the dataframe is {max}")
 
 
