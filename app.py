@@ -12,8 +12,8 @@ except:
 st.write(df.head())
 
 
-container=st.container()
-recognizer=sr.Recognizer()
+container = st.container()
+recognizer = sr.Recognizer()
 recognizer.energy_threshold=300
 
 mic=sr.Microphone()
@@ -25,8 +25,6 @@ with mic as source:
         st.write(text)
     except sr.UnknownValueError:
         st.write("could not understand")
-        
-
 
 
 num1=st.number_input("enter 1st number")
