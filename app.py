@@ -30,7 +30,7 @@ df_aux = df.describe(include='all')
 st.write(df_aux)
 
 max = df["values"].max()
-st.write(max)
+st.write(f"The maximum value in the dataframe is {max}")
 
 
 num1=st.number_input("enter 1st number")
