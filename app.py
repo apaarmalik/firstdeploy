@@ -2,8 +2,10 @@ import streamlit as st
 import pandas as pd
 import openpyxl as px
 
-
-file = st.file_uploader("Select an excel File", accept_multiple_files=False)
+try:
+    file = st.file_uploader("Select an excel File", accept_multiple_files=False)
+except ValueError:
+    print(" ")
 
 try:
     df = pd.read_excel(file)
