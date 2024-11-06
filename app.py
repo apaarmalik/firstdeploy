@@ -15,7 +15,7 @@ try:
 except:
     df = pd.read_csv(file)
 st.write(df.head())
-st.write(df.describe())
+st.write(df.info())
 
 
 num1=st.number_input("enter 1st number")
