@@ -19,7 +19,7 @@ except:
 st.write(df.head())
 
 buffer = io.StringIO()
-df.describe(buf=buffer)
+df.info(buf=buffer)
 s = buffer.getvalue()
 st.text(s)
 
