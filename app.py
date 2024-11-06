@@ -2,12 +2,13 @@ import streamlit as st
 import pandas as pd
 import openpyxl as px
 import os
-os.environ["STREAMLIT_CLIENT_SHOWERRORDETAILS"] = "false"
 
-try:
-    file = st.file_uploader("Select an excel File", accept_multiple_files=False)
-except ValueError:
-    print(" ")
+while True:
+    try:
+        file = st.file_uploader("Select an excel File", accept_multiple_files=False)
+        break
+    except ValueError:
+        print(" ")
 
 try:
     df = pd.read_excel(file)
