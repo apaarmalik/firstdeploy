@@ -34,7 +34,7 @@ st.write(f"The maximum value in the dataframe is {max}")
 
 tx = st.chat_input("Enter the text")
 ctx = tx.split()
-st.write(ctx)
+st.write(ctx[0])
 
 
 num1=st.number_input("enter 1st number")
