@@ -40,8 +40,8 @@ for i in range(len(ctx)):
         max = df["value"].max()
         st.write(f"The maximum value in the dataframe is {max}")
     else:
-        st.write(f"Aska valid question")
-
+        next
+        
 num1=st.number_input("enter 1st number")
 num2=st.number_input("enter 2nd number")
 opr = st.chat_input("Enter the operator")
