@@ -32,6 +32,10 @@ st.write(df_aux)
 max = df["value"].max()
 st.write(f"The maximum value in the dataframe is {max}")
 
+tx = st.chat_input("Enter the text")
+ctx = tx.split()
+st.write(ctx)
+
 
 num1=st.number_input("enter 1st number")
 num2=st.number_input("enter 2nd number")
