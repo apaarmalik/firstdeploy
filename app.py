@@ -40,7 +40,7 @@ for i in range(len(ctx)):
         max = df["value"].max()
         st.write(f"The maximum value in the dataframe is {max}")
     else:
-        next
+        pass
         
 num1=st.number_input("enter 1st number")
 num2=st.number_input("enter 2nd number")
