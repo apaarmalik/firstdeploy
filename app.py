@@ -33,7 +33,8 @@ st.write(df_aux)
 
 tx = st.chat_input("Enter the text")
 ctx = tx.split()
-
+st.write(len(ctx))
+i=0
 for i in range(len(ctx)):
     if ctx[i]=="max":
         max = df["value"].max()
